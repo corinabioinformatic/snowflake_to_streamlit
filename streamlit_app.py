@@ -10,5 +10,5 @@ st.text('🐔 Hard-Boiled Free-Range Egg')
 st.text('🥑 Guacamole burritos')
 st.text('🍞 beans in toast')
 
-streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
+st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
