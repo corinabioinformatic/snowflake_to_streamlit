@@ -12,7 +12,17 @@ my_data_rows = my_cur.fetchall()
 #my_data_row = my_cur.fetchone()
 #st.text("Hello from :")
 #st.text(my_data_row)
+
 st.header("The fruit load list contains:")
+#----
+my_data_rows2 = my_data_rows.set_index(0)
+# Let's put a pick list here so they can pick the fruit they want to include 
+fruits_selected2 = st.multiselect("Pick fruits to see:", list(my_data_rows2.index),['Banana'])
+fruits_to_show2 = my_data_rows.loc[fruits_selected2]
+
+# display table
+st.dataframe(fruits_to_show2)
+#----
 st.dataframe(my_data_rows)
 
 
@@ -39,6 +49,8 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # display table
 st.dataframe(fruits_to_show)
 
+
+###### FRUIT SELECTION
 st.header("Fruityvice Fruit Advice!")
 fruit_choice = st.text_input('What fruit would you like information about?','Kiwi')
 st.write('The user entered ', fruit_choice)
