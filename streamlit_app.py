@@ -16,7 +16,7 @@ my_data_rows = my_cur.fetchall()
 st.header("The fruit load list contains:")
 #----
 my_data_rows2 = pd.DataFrame({'Fruits':my_data_rows})
-#my_data_rows2 = my_data_rows2.set_index('Fruits')
+my_data_rows2 = my_data_rows2.set_index('Fruits')
 # Let's put a pick list here so they can pick the fruit they want to include 
 #fruits_selected2 = st.multiselect("Pick fruits to see:", list(my_data_rows2.index),['Banana'])
 #fruits_to_show2 = my_data_rows.loc[fruits_selected2]
