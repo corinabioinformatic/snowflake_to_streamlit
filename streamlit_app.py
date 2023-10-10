@@ -15,8 +15,10 @@ my_data_rows = my_cur.fetchall()
 
 st.header("The fruit load list contains:")
 #----
-#my_untupled_rows = pd.DataFrame(my_data_rows).set_index(0)[1]
+#my_unlisted_rows = [x for x in my_data_rows]
 st.text(type(my_data_rows))
+st.text(my_data_rows[0])
+
 my_data_rows2 = pd.DataFrame({'Fruits':pd.Series(my_data_rows)})
 my_data_rows2 = my_data_rows2.set_index('Fruits')
 # Let's put a pick list here so they can pick the fruit they want to include 
