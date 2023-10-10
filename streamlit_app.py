@@ -34,7 +34,7 @@ st.text(my_data_rows2.shape)
 # df[df['A'].str.contains("hello")]
 # display table
 base_df = pd.DataFrame(my_data_rows)
-st.dataframe( base_df[base_df[0].str.contains(fruits_selected2)])
+st.dataframe( base_df)#[base_df[0].str.contains(fruits_selected2)])
 #----
 #st.dataframe(my_data_rows2)
 
