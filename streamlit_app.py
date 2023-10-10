@@ -15,9 +15,9 @@ my_data_rows = my_cur.fetchall()
 
 st.header("The fruit load list contains:")
 #----
-#my_unlisted_rows = [x for x in my_data_rows]
+my_unlisted_rows = [x for x in my_data_rows]
 st.text(type(my_data_rows))
-st.text(my_data_rows[0])
+st.text(my_unlisted_rows)
 
 my_data_rows2 = pd.DataFrame({'Fruits':pd.Series(my_data_rows)})
 my_data_rows2 = my_data_rows2.set_index('Fruits')
