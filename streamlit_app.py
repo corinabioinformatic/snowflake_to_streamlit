@@ -22,7 +22,7 @@ st.text(my_unlisted_rows)
 
 #my_data_rows2 = pd.DataFrame({'Fruits':pd.Series(my_data_rows)})
 my_data_rows2 = pd.DataFrame(my_data_rows)
-my_data_rows2 = my_data_rows2.set_index('Fruits')
+my_data_rows2 = my_data_rows2.set_index(0)
 # Let's put a pick list here so they can pick the fruit they want to include 
 fruits_selected2 = st.multiselect("Pick fruits to see:", list(my_data_rows2.index))
 #fruits_to_show2 = my_data_rows.loc[fruits_selected2]
