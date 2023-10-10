@@ -27,7 +27,7 @@ add_my_fruit = st.text_input(label='What input would you like to add?', max_char
 st.write('Thanks for adding ', add_my_fruit)
 
 # don't run anything past here while we troubleshoot
-streamlit.stop()
+st.stop()
 ## this will not work correctly but just go with it for now
 my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values ('from streamlit')")
 #-----
