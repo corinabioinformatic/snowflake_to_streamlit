@@ -31,9 +31,10 @@ st.text(fruits_selected2)
 st.text(type(my_data_rows2))
 st.text(len(my_data_rows2))
 st.text(my_data_rows2.shape)
-
+# df[df['A'].str.contains("hello")]
 # display table
-st.dataframe( pd.DataFrame(my_data_rows))
+base_df = pd.DataFrame(my_data_rows)
+st.dataframe( base_df[base_df['0'].str.contains(fruits_selected2)])
 #----
 #st.dataframe(my_data_rows2)
 
