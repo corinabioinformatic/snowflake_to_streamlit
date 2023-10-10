@@ -16,7 +16,7 @@ from urllib.error import URLError
 #st.text("Hello from :")
 #st.text(my_data_row)
 
-st.header("View Our Fruit List - Add your favorites!")
+st.title("View Our Fruit List - Add your favorites!")
 #------------------------------
 # Snowflake related functions
 def get_fruit_load_list():
@@ -55,7 +55,7 @@ if st.button('Add a Fruit to the List'):
 #-----
 
 
-st.title('My Parents New Healthy Diner')
+st.header('My Parents New Healthy Diner')
 st.header('Breakfast Menu')
    
 st.text('🥣 Omega 3 % Blueberry Oatmeal')
