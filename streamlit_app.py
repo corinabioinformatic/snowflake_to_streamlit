@@ -36,7 +36,7 @@ if st.button('Get Fruit Load List'):
 #st.dataframe(my_data_rows2)
 # Allow the end user to add a fruit to the list
 def insert_row_snowflake(new_fruit):
-   with my_cns.cursor() as my_cur:
+   with my_cnx.cursor() as my_cur:
       my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values ('"+ new_fruit +"')")
       return 'Thanks for adding '+ new_fruit
 add_my_fruit = st.text_input(label='What input would you like to add?', max_chars=50)
