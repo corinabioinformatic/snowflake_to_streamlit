@@ -63,7 +63,7 @@ try:
    if not fruit_choice:
       st.error("Please select a fruit to get information")
    else: 
-      st.write('The user entered ', fruit_choice)
+      #st.write('The user entered ', fruit_choice)
       fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
       #st.text(fruityvice_response.json())
       # write your own comment -what does the next line do? 
