@@ -38,7 +38,7 @@ st.dataframe( base_df)#[base_df[0].str.contains(fruits_selected2)])
 #----
 #st.dataframe(my_data_rows2)
 
-st.write('Thanks for adding ', add_my_fruit2)
+st.write('Thanks for adding ', add_my_fruit)
 
 ## this will not work correctly but just go with it for now
 my_cur.execute("SELECT * FROM pc_rivery_db.public.fruit_load_list values ('from streamlit')")
