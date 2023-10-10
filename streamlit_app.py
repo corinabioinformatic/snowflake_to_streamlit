@@ -27,9 +27,9 @@ add_my_fruit = st.text_input(label='What input would you like to add?', max_char
 st.write('Thanks for adding ', add_my_fruit)
 
 # don't run anything past here while we troubleshoot
-st.stop()
+#st.stop()
 ## this will not work correctly but just go with it for now
-my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values ('from streamlit')")
+#my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values ('from streamlit')")
 #-----
 
 
@@ -63,7 +63,7 @@ try:
    if not fruit_choice:
       st.error("Please select a fruit to get information")
    else: 
-      #st.write('The user entered ', fruit_choice)
+      #st.write('The user entered ', fruit_choice) 
       fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
       #st.text(fruityvice_response.json())
       # write your own comment -what does the next line do? 
