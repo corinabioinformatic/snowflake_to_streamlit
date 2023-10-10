@@ -3,6 +3,8 @@ import pandas as pd
 import requests
 import snowflake.connector
 
+# don't run anything past here while we troubleshoot
+streamlit.stop()
 
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
 my_cur = my_cnx.cursor()
