@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import requests
 import snowflake.connector
+import urllib.error import URLError
 
-# don't run anything past here while we troubleshoot
-streamlit.stop()
+
 
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
 my_cur = my_cnx.cursor()
@@ -26,6 +26,8 @@ st.dataframe( base_df)#[base_df[0].str.contains(fruits_selected2)])
 add_my_fruit = st.text_input(label='What input would you like to add?', max_chars=50)
 st.write('Thanks for adding ', add_my_fruit)
 
+# don't run anything past here while we troubleshoot
+streamlit.stop()
 ## this will not work correctly but just go with it for now
 my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values ('from streamlit')")
 #-----
