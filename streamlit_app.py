@@ -25,9 +25,9 @@ my_data_rows2 = pd.DataFrame(my_data_rows)
 #my_data_rows2 = my_data_rows2.rename(columns={'0':'Fruits'})
 my_data_rows2 = my_data_rows2.set_index(0)
 # Let's put a pick list here so they can pick the fruit they want to include 
-fruits_selected2 = st.multiselect("Pick fruits to see:", list(my_data_rows2.index))
+add_my_fruit = st.multiselect("Pick fruits to see:", list(my_data_rows2.index))
 fruits_to_show2 = my_data_rows2 #my_data_rows2.loc[fruits_selected2]
-st.text(fruits_selected2)
+st.text(add_my_fruit)
 st.text(type(my_data_rows2))
 st.text(len(my_data_rows2))
 st.text(my_data_rows2.shape)
@@ -38,6 +38,11 @@ st.dataframe( base_df)#[base_df[0].str.contains(fruits_selected2)])
 #----
 #st.dataframe(my_data_rows2)
 
+st.write('Thanks for adding ', add_my_fruit)
+
+## this will not work correctly but just go with it for now
+my_cur.execute("SELECT * FROM pc_rivery_db.public.fruit_load_list values ('from streamlit')")
+#-----
 
 
 st.title('My Parents New Healthy Diner')
