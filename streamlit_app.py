@@ -8,7 +8,7 @@ from urllib.error import URLError
 #-------------------------------------------------
 
 
-my_cur = my_cnx.cursor()
+#my_cur = my_cnx.cursor()
 #my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()") # testing connection
 #my_cur.execute("SELECT * FROM pc_rivery_db.public.fruit_load_list")
 #my_data_rows = my_cur.fetchall()
