@@ -27,6 +27,7 @@ my_data_rows2 = my_data_rows2.set_index(0)
 # Let's put a pick list here so they can pick the fruit they want to include 
 fruits_selected2 = st.multiselect("Pick fruits to see:", list(my_data_rows2.index))
 fruits_to_show2 = my_data_rows2 #my_data_rows2.loc[fruits_selected2]
+st.text(fruits_selected2)
 st.text(type(my_data_rows2))
 st.text(len(my_data_rows2))
 st.text(my_data_rows2.shape)
