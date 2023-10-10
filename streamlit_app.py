@@ -14,7 +14,7 @@ my_data_rows = my_cur.fetchall()
 #st.text(my_data_row)
 
 st.header("The fruit load list contains:")
-#----
+#------------------------------
 #my_unlisted_rows = pd.explode(my_data_rows)
 st.text(type(my_data_rows))
 st.text(type(my_data_rows[0]))
@@ -35,9 +35,9 @@ st.text(my_data_rows2.shape)
 # display table
 base_df = pd.DataFrame(my_data_rows)
 st.dataframe( base_df)#[base_df[0].str.contains(fruits_selected2)])
-#----
+#----------------------------------------------------
 #st.dataframe(my_data_rows2)
-
+add_my_fruit = st.text_input(label='What input would you like to add?', max_chars=50)
 st.write('Thanks for adding ', add_my_fruit)
 
 ## this will not work correctly but just go with it for now
