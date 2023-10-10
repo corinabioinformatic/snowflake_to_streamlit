@@ -29,7 +29,7 @@ fruits_selected2 = st.multiselect("Pick fruits to see:", list(my_data_rows2.inde
 fruits_to_show2 = my_data_rows2.loc[fruits_selected2]
 
 # display table
-#st.dataframe(fruits_to_show2)
+st.dataframe(fruits_to_show2)
 #----
 #st.dataframe(my_data_rows2)
 
