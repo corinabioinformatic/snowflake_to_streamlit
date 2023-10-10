@@ -15,23 +15,7 @@ my_data_rows = my_cur.fetchall()
 
 st.header("The fruit load list contains:")
 #------------------------------
-#my_unlisted_rows = pd.explode(my_data_rows)
-st.text(type(my_data_rows))
-st.text(type(my_data_rows[0]))
-st.text(my_data_rows)
 
-#my_data_rows2 = pd.DataFrame({'Fruits':pd.Series(my_data_rows)})
-my_data_rows2 = pd.DataFrame(my_data_rows)
-#my_data_rows2 = my_data_rows2.rename(columns={'0':'Fruits'})
-my_data_rows2 = my_data_rows2.set_index(0)
-# Let's put a pick list here so they can pick the fruit they want to include 
-add_my_fruit = st.multiselect("Pick fruits to see:", list(my_data_rows2.index))
-fruits_to_show2 = my_data_rows2 #my_data_rows2.loc[fruits_selected2]
-st.text(add_my_fruit)
-st.text(type(my_data_rows2))
-st.text(len(my_data_rows2))
-st.text(my_data_rows2.shape)
-# df[df['A'].str.contains("hello")]
 # display table
 base_df = pd.DataFrame(my_data_rows)
 st.dataframe( base_df)#[base_df[0].str.contains(fruits_selected2)])
