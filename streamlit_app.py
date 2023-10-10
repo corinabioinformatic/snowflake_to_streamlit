@@ -16,7 +16,7 @@ from urllib.error import URLError
 #st.text("Hello from :")
 #st.text(my_data_row)
 
-st.header("The fruit load list contains:")
+st.header("View Our Fruit List - Add your favorites!")
 #------------------------------
 # Snowflake related functions
 def get_fruit_load_list():
@@ -25,9 +25,10 @@ def get_fruit_load_list():
       return my_cur.fetchall()
 
 # Add a button to load the fruit
-if st.button('Get Fruit Load List'):
+if st.button('Get Fruit List'):
    my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
    my_data_rows = get_fruit_load_list()
+   my_cnx.close()
    # display table
    base_df = pd.DataFrame(my_data_rows)
    st.dataframe( base_df)#[base_df[0].str.contains(fruits_selected2)])
@@ -38,6 +39,7 @@ if st.button('Get Fruit Load List'):
 def insert_row_snowflake(new_fruit):
    with my_cnx.cursor() as my_cur:
       my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values ('"+ new_fruit +"')")
+      my_cnx.close()
       return 'Thanks for adding '+ new_fruit
 add_my_fruit = st.text_input(label='What input would you like to add?', max_chars=50)
 #st.write('Thanks for adding ', add_my_fruit)
