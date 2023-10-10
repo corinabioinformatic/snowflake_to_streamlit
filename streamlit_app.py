@@ -55,7 +55,16 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # display table
 st.dataframe(fruits_to_show)
 
+#-----------------------------------------------------------------
 
+def get_fruityvice_data(this_fruit_choice):
+   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+this_fruit_choice)
+   #st.text(fruityvice_response.json())
+   # write your own comment -what does the next line do? 
+   fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
+   return fruityvice_normalized
+
+   
 ###### FRUIT SELECTION
 st.header("Fruityvice Fruit Advice!")
 try:   
@@ -64,11 +73,8 @@ try:
       st.error("Please select a fruit to get information")
    else: 
       #st.write('The user entered ', fruit_choice) 
-      fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
-      #st.text(fruityvice_response.json())
-      # write your own comment -what does the next line do? 
-      fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
+      back_from_function = get_fruityvice_data(fruit_choice)
       # write your own comment - what does this do?
-      st.dataframe(fruityvice_normalized)
+      st.dataframe(back_from_function)
 except URLError as e:
    st.error()
