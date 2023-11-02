@@ -55,8 +55,8 @@ if st.button('Add a Fruit to the List'):
 #-----
 
 
-st.header(':sunglasses: Our recommended menu examples!*')
-st.caption(' _If you have any medical condition, please seek advice from a medical doctor, since they may adjust your menu to your condition for better outcomes_ :blue[colors] ')
+st.header('1. :sunglasses: Our recommended menu examples!*')
+st.caption(' _If you have any medical condition, please seek advice from a medical doctor, since they may adjust your menu to your condition for better outcomes._ ')
 st.header('Breakfast Menu')
    
 st.text('🥣 Omega 3 % Blueberry Oatmeal')
@@ -65,7 +65,7 @@ st.text('🐔 Hard-Boiled Free-Range Egg')
 st.text('🥑 Guacamole burritos')
 st.text('🍞 beans in toast')
 
-st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
+st.header('🍌🥭 2. Hands-on! Build your Own Fruit Smoothie 🥝🍇')
 
 
 my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
@@ -89,11 +89,13 @@ def get_fruityvice_data(this_fruit_choice):
 
    
 ###### FRUIT SELECTION
-st.header("Fruityvice Fruit Advice!")
+st.header("3. Fruityvice Fruit Advice!*")
+st.caption(' _If you have any medical condition, please seek advice from a medical doctor, since they may adjust your menu to your condition for better outcomes._ ')
+
 try:   
    fruit_choice = st.text_input('What fruit would you like information about?')
    if not fruit_choice:
-      st.error("Please select a fruit to get information")
+      st.error(":book:Please select a fruit to get information.")
    else: 
       #st.write('The user entered ', fruit_choice) 
       back_from_function = get_fruityvice_data(fruit_choice)
