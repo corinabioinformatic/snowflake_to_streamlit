@@ -55,7 +55,8 @@ if st.button('Add a Fruit to the List'):
 #-----
 
 
-st.header('My Parents New Healthy Diner')
+st.header(':sunglasses: Our recommended menu examples!*')
+st.caption(' _If you have any medical condition, please seek advice from a medical doctor, since they may adjust your menu to your condition for better outcomes_ :blue[colors] ')
 st.header('Breakfast Menu')
    
 st.text('🥣 Omega 3 % Blueberry Oatmeal')
