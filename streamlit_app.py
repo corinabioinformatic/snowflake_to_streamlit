@@ -15,8 +15,8 @@ from urllib.error import URLError
 #my_data_row = my_cur.fetchone()
 #st.text("Hello from :")
 #st.text(my_data_row)
-st.info("This current page has been made with Streamlit and Snowflake as a backend. Both of them connected by Python. The current data is live until 6th November of 2023. Developed by FairCuratorLtd")
-st.title("View Our Fruit List - Add your favorites!")
+st.info("This current page has been made with Streamlit and Snowflake as a backend. Both of them connected by Python. The current data may need to be refreshed by 3rd November of 2023. Developed by FairCuratorLtd")
+st.title("Fresh fruit for a healthy lifestyle. Our favorites:")
 #------------------------------
 # Snowflake related functions
 def get_fruit_load_list():
