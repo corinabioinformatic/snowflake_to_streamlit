@@ -55,7 +55,7 @@ if st.button('Add a Fruit to the List'):
 #-----
 
 
-st.header('1. :sunglasses: Our recommended menu examples!*')
+st.header('1. Our recommended menu examples!*  :sunglasses:')
 st.caption(' _If you have any medical condition, please seek advice from a medical doctor, since they may adjust your menu to your condition for better outcomes._ ')
 st.header('Breakfast Menu')
    
@@ -89,7 +89,7 @@ def get_fruityvice_data(this_fruit_choice):
 
    
 ###### FRUIT SELECTION
-st.header("3. Fruityvice Fruit Advice!*")
+st.header("3. Fruityvice Fruit Advice!* :book: ")
 st.caption(' _If you have any medical condition, please seek advice from a medical doctor, since they may adjust your menu to your condition for better outcomes._ ')
 
 try:   
